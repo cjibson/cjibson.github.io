@@ -1,31 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Bayon&display=swap');
+
 body {
-    background-color: #FCEBB6;
-    color: #221811;
-    font-family: Tahoma, Arial, sans-serif;
+	background-color: #FCEBB6;
+	background-image: url(images/fadedroad50.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #221811;
+	font-family: Tahoma, Arial, sans-serif;
+
+}
+
+#wrapper {
+	background-color: #FEFAEB;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	min-width: 900px;
+	max-width: 1280px;
+	box-shadow: 3px 3px 3px #676767;
 }
 
 header {
-    color: #8C3826;
-    background-color: #D2B48C;
-    text-align: center;
+	background-color: #D2B48C;
+	color: #8C3826;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 h1 {
-    line-height: 200%;
+	font-size: 3em;
+	font-family: 'Bayon', sans-serif;
 }
 
 h2 {
-    color: #8C3826;
+	color: #8C3826;
+}
+
+h3,
+dt {
+	color: #8C3826;
+}
+
+h4 {
+	background-color: #D2B48C;
+	font-size: 1.2em;
+	padding-left: .5em;
+	padding-bottom: .25em;
 }
 
 nav {
-    text-align: center;
-    font-weight: bold;
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.5em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+main {
+	display: block;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-bottom: 2em;
+}
+
+.details {
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+img {
+	border-style: none;
+	max-width: 100%;
+	height: auto;
+}
+
+#homehero {
+	height: 300px;
+	background-image: url(images/hero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 footer {
-    background-color: #D2B48C;
-    font-size: 0.60em;
-    font-style: italic;
-    text-align: center;
+	background-color: #D2B48C;
+	font-size: .60em;
+	font-style: italic;
+	text-align: center;
+	padding-bottom: 1em;
+	border-top: 2px solid #8C3826;
 }
