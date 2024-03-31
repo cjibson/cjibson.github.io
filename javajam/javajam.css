@@ -53,8 +53,7 @@ h2 {
 	color: #8C3826;
 }
 
-h3,
-dt {
+h3, dt {
 	color: #8C3826;
 }
 
@@ -110,13 +109,7 @@ main {
 	padding: 0 0 2em 0;
 }
 
-h2,
-h3,
-h4,
-p,
-div,
-ul,
-dl {
+h2,h3,h4,p,div,ul,dl {
 	padding-left: 1em;
 	padding-right: 1em;
 }
