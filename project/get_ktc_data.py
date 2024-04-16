@@ -2,7 +2,7 @@ import requests
 
 from bs4 import BeautifulSoup
 
-def scrape_ktc():
+def scrape_ktc_risers():
     # URL of the website you want to scrape
     url = 'https://keeptradecut.com/dynasty-rankings'
 
@@ -17,9 +17,9 @@ def scrape_ktc():
         # Find the top 5 risers section
         top_risers_section = soup.find('div', class_='riser insightWrapper')
 
-        #Initialize lists to store data
-        players = []
-        values = []
+        # Initialize lists to store data
+        rising_players = []
+        rising_values = []
 
         if top_risers_section:
             # Find all top 5 players within the section
@@ -31,6 +31,53 @@ def scrape_ktc():
                 
                 # Extract number below value
                 value_number = player.find('div', class_='topFiveValue').find('p').text
+
+                # Append data to lists
+                rising_players.append(player_name)
+                rising_values.append(value_number)
+
+            # Print the lists
+            print(rising_players)
+            print(rising_values)
+        else:
+            print("Top risers section not found.")
+
+def scrape_ktc_fallers():
+    # URL of the website you want to scrape
+    url = 'https://keeptradecut.com/dynasty-rankings'
+
+    # Send a GET request to the URL
+    response = requests.get(url)
+
+    # Check if the request was successful (status code 200)
+    if response.status_code == 200:
+        # Parse the HTML content of the page
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Find the top 5 risers section
+        top_fallers_section = soup.find('div', class_='faller insightWrapper')
+
+        # Initialize lists to store data
+        falling_players = []
+        falling_values = []
+
+        if top_fallers_section:
+            # Find all top 5 players within the section
+            top_fallers = top_fallers_section.find_all('div', class_='topFivePlayer')
+            
+            for player in top_fallers:
+                # Extract player name
+                player_name = player.find('div', class_='topFiveName').find('p').text
                 
-    else:
-        print('Failed to retrieve the webpage')
+                # Extract number below value
+                value_number = player.find('div', class_='topFiveValue').find('p').text
+
+                # Append data to lists
+                falling_players.append(player_name)
+                falling_values.append(value_number)
+
+            # Print the lists
+            print(falling_players)
+            print(falling_values)
+        else:
+            print("Top fallers section not found.")
