@@ -81,7 +81,7 @@ footer {
 
 /* Apply styles to all tables */
 table {
-    width: 100%;
+    width: 50%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }

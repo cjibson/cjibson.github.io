@@ -39,7 +39,10 @@ def scrape_ktc_risers():
 
             # Create DataFrame
             df = pd.DataFrame({'Player': rising_players, 'KTC Value': rising_values})
-            return df
+            
+            # Convert DataFrame to HTML table
+            html_table = df.to_html(index=False)
+            return html_table
         
         else:
             print("Top risers section not found.")
@@ -81,19 +84,22 @@ def scrape_ktc_fallers():
 
             # Create DataFrame
             df = pd.DataFrame({'Player': falling_players, 'KTC Value': falling_values})
-            return df
+
+            # Convert DataFrame to HTML table
+            html_table = df.to_html(index=False)
+            return html_table
 
         else:
             print("Top fallers section not found.")
             return None
 
 # Call the functions and assign the returned DataFrames to variables
-df1 = scrape_ktc_risers()
-df2 = scrape_ktc_fallers()
+risers_html_table = scrape_ktc_risers()
+fallers_html_table = scrape_ktc_fallers()
 
-# Save DataFrames to CSV files
-if df1 is not None:
-    df1.to_csv('C:\\Users\\jibso\\OneDrive\\Desktop\\Websites\\https---cjibson.github.io-\\project\\data\\risers.csv', index=False)
+# Save HTML tables to files
+with open('C:\\Users\\jibso\\OneDrive\\Desktop\\Websites\\https---cjibson.github.io-\\project\\data\\risers_table.html', 'w') as f:
+    f.write(risers_html_table)
 
-if df2 is not None:
-    df2.to_csv('C:\\Users\\jibso\\OneDrive\\Desktop\\Websites\\https---cjibson.github.io-\\project\\data\\fallers.csv', index=False)
+with open('C:\\Users\\jibso\\OneDrive\\Desktop\\Websites\\https---cjibson.github.io-\\project\\data\\fallers_table.html', 'w') as f:
+    f.write(fallers_html_table)
