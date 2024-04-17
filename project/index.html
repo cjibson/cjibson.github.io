@@ -62,9 +62,10 @@
                             const td = document.createElement('td');
                             // Check if cell data contains HTML link
                             if (cell.startsWith('<a href="')) {
-                                const link = document.createElement('a');
-                                link.innerHTML = cell;
-                                td.appendChild(link);
+                                // Parse the HTML link and set it as innerHTML
+                                const link = cell.substring(cell.indexOf('<a href="') + 9, cell.indexOf('">'));
+                                const text = cell.substring(cell.indexOf('">') + 2, cell.indexOf('</a>'));
+                                td.innerHTML = `<a href="${link}">${text}</a>`;
                             } else {
                                 td.textContent = cell;
                             }
