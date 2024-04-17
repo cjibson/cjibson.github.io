@@ -39,6 +39,8 @@ nav ul li a {
 
 main {
     padding: 20px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space between children */
 }
 
 section {
@@ -54,7 +56,7 @@ footer {
 
 /* CSS for table styling */
 table {
-    width: 50%; /* Adjust as needed */
+    width: 100%; /* Adjust as needed */
     border-collapse: collapse;
     border: 1px solid #ddd;
 }
@@ -72,23 +74,10 @@ tr:hover {
 
 /* Aligning content */
 #left-content {
-    text-align: left;
-    width: 45%;
+    flex: 1; /* Take up remaining space */
+    margin-right: 20px; /* Add spacing between sections */
 }
 
 #right-content {
-    text-align: right;
-    width: 45%;
-}
-
-main {
-    display: flex;
-}
-
-.container {
-    flex: 1;
-}
-
-#right-container {
-    justify-content: flex-end;
+    flex: 1; /* Take up remaining space */
 }
