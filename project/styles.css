@@ -36,9 +36,6 @@ nav ul li a {
 
 main {
     padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    gap: 20px;
 }
 
 section {
@@ -68,12 +65,4 @@ th {
 }
 tr:hover {
     background-color: #f2f2f2;
-}
-
-#top5Risers, #top5Fallers {
-    grid-column: 1 / 2; /* Tables on the left */
-}
-
-#right-content {
-    grid-column: 2 / -1; /* Rules and insights on the right */
 }
