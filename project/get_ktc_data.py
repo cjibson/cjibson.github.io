@@ -1,6 +1,7 @@
 import requests
 
 from bs4 import BeautifulSoup
+import pandas as pd
 
 def scrape_ktc_risers():
     # URL of the website you want to scrape
@@ -36,11 +37,13 @@ def scrape_ktc_risers():
                 rising_players.append(player_name)
                 rising_values.append(value_number)
 
-            # Print the lists
-            print(rising_players)
-            print(rising_values)
+            # Create DataFrame
+            df = pd.DataFrame({'Player': rising_players, 'KTC Value': rising_values})
+            return df
+        
         else:
             print("Top risers section not found.")
+            return None
 
 def scrape_ktc_fallers():
     # URL of the website you want to scrape
@@ -76,8 +79,21 @@ def scrape_ktc_fallers():
                 falling_players.append(player_name)
                 falling_values.append(value_number)
 
-            # Print the lists
-            print(falling_players)
-            print(falling_values)
+            # Create DataFrame
+            df = pd.DataFrame({'Player': falling_players, 'KTC Value': falling_values})
+            return df
+
         else:
             print("Top fallers section not found.")
+            return None
+
+# Call the functions and assign the returned DataFrames to variables
+df1 = scrape_ktc_risers()
+df2 = scrape_ktc_fallers()
+
+# Save DataFrames to CSV files
+if df1 is not None:
+    df1.to_csv('C:\\Users\\jibso\\OneDrive\\Desktop\\Websites\\https---cjibson.github.io-\\project\\data\\risers.csv', index=False)
+
+if df2 is not None:
+    df2.to_csv('C:\\Users\\jibso\\OneDrive\\Desktop\\Websites\\https---cjibson.github.io-\\project\\data\\fallers.csv', index=False)
