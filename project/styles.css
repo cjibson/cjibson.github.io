@@ -36,6 +36,9 @@ nav ul li a {
 
 main {
     padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px;
 }
 
 section {
@@ -67,20 +70,11 @@ tr:hover {
     background-color: #f2f2f2;
 }
 
-/* Flexbox layout for sections and tables */
+/* Specific styling for sections */
 #top5Risers, #top5Fallers {
-    display: flex;
-    flex-wrap: wrap;
+    grid-column: 1 / span 1; /* Tables on the left */
 }
 
-#risersTable, #fallersTable {
-    flex: 1;
-    margin-right: 20px; /* Adjust margin as needed */
-}
-
-.container {
-    width: 50%;
-    float: left;
-    box-sizing: border-box;
-    padding: 0 20px; /* Adjust padding as needed */
+#right-content {
+    grid-column: 2 / span 1; /* Rules and insights on the right */
 }
