@@ -41,7 +41,7 @@ def scrape_ktc_risers():
             df = pd.DataFrame({'Player': rising_players, 'KTC Value': rising_values})
             
             # Convert DataFrame to HTML table
-            html_table = df.to_html(index=False)
+            html_table = df.to_html(classes='', index=False)
             return html_table
         
         else:
@@ -86,7 +86,7 @@ def scrape_ktc_fallers():
             df = pd.DataFrame({'Player': falling_players, 'KTC Value': falling_values})
 
             # Convert DataFrame to HTML table
-            html_table = df.to_html(index=False)
+            html_table = df.to_html(classes='', index=False)
             return html_table
 
         else:
