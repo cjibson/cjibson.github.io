@@ -51,7 +51,7 @@ footer {
 
 /* CSS for table styling */
 table {
-    width: 100%; /* Adjust as needed */
+    width: 50%; /* Adjust as needed */
     border-collapse: collapse;
     border: 1px solid #ddd;
 }
@@ -65,4 +65,15 @@ th {
 }
 tr:hover {
     background-color: #f2f2f2;
+}
+
+/* Aligning content */
+#top5Risers, #top5Fallers {
+    text-align: left;
+    width: 45%;
+}
+
+#right-content {
+    text-align: right;
+    width: 45%;
 }
