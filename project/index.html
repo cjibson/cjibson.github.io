@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fantasy Football App</title>
+    <title>Fantasy Football Dynasty Rankings</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,12 +27,12 @@
 
     <main>
         <section id="top5Risers">
-            <h2>Top 5 Risers</h2>
+            <h2>Top 5 Risers According to Keep Trade Cut</h2>
             <div id="risersTable"></div>
         </section>
 
         <section id="top5Fallers">
-            <h2>Top 5 Fallers</h2>
+            <h2>Top 5 Fallers According to Keep Trade Cut</h2>
             <div id="fallersTable"></div>
         </section>
     </main>
@@ -45,7 +45,7 @@
                 .then(data => {
                     const rows = data.trim().split('\n').map(row => row.split(','));
                     const table = document.createElement('table');
-
+    
                     // Create table header
                     const headerRow = document.createElement('tr');
                     rows[0].forEach(header => {
@@ -54,24 +54,31 @@
                         headerRow.appendChild(th);
                     });
                     table.appendChild(headerRow);
-
+    
                     // Create table rows
                     for (let i = 1; i < rows.length; i++) {
                         const row = document.createElement('tr');
                         rows[i].forEach(cell => {
                             const td = document.createElement('td');
-                            td.textContent = cell;
+                            // Check if cell data contains HTML link
+                            if (cell.startsWith('<a href="')) {
+                                const link = document.createElement('a');
+                                link.innerHTML = cell;
+                                td.appendChild(link);
+                            } else {
+                                td.textContent = cell;
+                            }
                             row.appendChild(td);
                         });
                         table.appendChild(row);
                     }
-
+    
                     // Append table to container
                     document.getElementById(containerId).appendChild(table);
                 })
                 .catch(error => console.error('Error loading CSV:', error));
         }
-
+    
         // Load CSV data into tables
         loadCSVAsTable('data/risers.csv', 'risersTable');
         loadCSVAsTable('data/fallers.csv', 'fallersTable');
