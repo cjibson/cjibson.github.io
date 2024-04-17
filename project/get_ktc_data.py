@@ -39,10 +39,6 @@ def scrape_ktc_risers():
 
             # Create DataFrame
             df = pd.DataFrame({'Player': rising_players, 'KTC Value': rising_values})
-
-            # Add ESPN links to the 'Player' column
-            df['Player'] = df['Player'].apply(lambda x: f'<a href="https://www.google.com/search?q={x}+espn">{x}</a>')
-            
             return df
         
         else:
@@ -85,10 +81,6 @@ def scrape_ktc_fallers():
 
             # Create DataFrame
             df = pd.DataFrame({'Player': falling_players, 'KTC Value': falling_values})
-
-            # Add ESPN links to the 'Player' column
-            df['Player'] = df['Player'].apply(lambda x: f'<a href="https://www.google.com/search?q={x}+espn">{x}</a>')
-
             return df
 
         else:
