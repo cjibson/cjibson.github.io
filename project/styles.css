@@ -20,6 +20,9 @@ header h1 {
     margin: 0;
 }
 
+nav {
+    float: right;
+}
 nav ul {
     list-style-type: none;
 }
@@ -68,7 +71,7 @@ tr:hover {
 }
 
 /* Aligning content */
-#top5Risers, #top5Fallers {
+#left-content {
     text-align: left;
     width: 45%;
 }
