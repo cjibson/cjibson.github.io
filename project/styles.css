@@ -80,3 +80,15 @@ tr:hover {
     text-align: right;
     width: 45%;
 }
+
+main {
+    display: flex;
+}
+
+.container {
+    flex: 1;
+}
+
+#right-container {
+    justify-content: flex-end;
+}
