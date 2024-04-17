@@ -49,36 +49,6 @@ footer {
     text-align: center;
 }
 
-/* Add dropdown styles */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 1;
-    text-align: center; /* Center the text */
-}
-
-.dropdown-content li {
-    display: block;
-    text-align: center; /* Center the list items */
-}
-
-.dropdown-content li a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content li a:hover {
-    background-color: #ddd;
-}
-
 /* CSS for table styling */
 table {
     width: 50%;
