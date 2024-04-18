@@ -16,32 +16,8 @@ header {
     padding: 20px;
 }
 
-header h1 {
-    margin: 0;
-}
-
-nav {
-    float: right;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
 main {
-    padding: 0px;
-    display: flex;
-    justify-content: space-between; /* To evenly distribute the space between sections */
+    padding: 0px;/* To evenly distribute the space between sections */
 }
 
 section {
