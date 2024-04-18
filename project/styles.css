@@ -10,14 +10,6 @@ header {
     padding: 20px;
 }
 
-main {
-    padding: 0px;/* To evenly distribute the space between sections */
-}
-
-section {
-    margin-bottom: 30px;
-}
-
 footer {
     background-color: #333;
     color: #fff;
@@ -44,14 +36,4 @@ th {
 
 tr:hover {
     background-color: #f2f2f2;
-}
-
-/* Aligning content */
-#left-content {
-    width: 45%;
-}
-
-#right-content {
-    width: 45%;
-    text-align: right;
 }
