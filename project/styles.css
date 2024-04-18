@@ -19,9 +19,10 @@ footer {
 
 /* CSS for table styling */
 table {
-    width: 50%; /* Adjust as needed */
+    width: 40%; /* Adjust as needed */
     border-collapse: collapse;
     border: 1px solid #ddd;
+    text-align: right;
 }
 
 th, td {
