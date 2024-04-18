@@ -39,7 +39,7 @@ nav ul li a {
 }
 
 main {
-    padding: 20px;
+    padding: 0px;
     display: flex;
     justify-content: space-between; /* To evenly distribute the space between sections */
 }
@@ -57,13 +57,13 @@ footer {
 
 /* CSS for table styling */
 table {
-    width: 100%; /* Adjust as needed */
+    width: 50%; /* Adjust as needed */
     border-collapse: collapse;
     border: 1px solid #ddd;
 }
 
 th, td {
-    padding: 8px;
+    padding: 0px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
