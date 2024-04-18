@@ -17,6 +17,30 @@ footer {
     text-align: center;
 }
 
+/* CSS for horizontal navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #111;
+}
+
 /* CSS for table styling */
 table {
     width: 40%; /* Adjust as needed */
