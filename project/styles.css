@@ -62,3 +62,25 @@ th {
 tr:hover {
     background-color: #f2f2f2;
 }
+
+/* CSS for main content layout */
+main {
+    display: flex;
+}
+
+main > div {
+    flex: 1;
+    padding: 0 10px; /* Adjust padding as needed */
+}
+
+/* CSS for section layout */
+section {
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+/* CSS for tables alignment */
+#risersTable,
+#fallersTable {
+    float: right;
+    width: 50%; /* Adjust width as needed */
+}
