@@ -84,3 +84,25 @@ section {
     float: right;
     width: 50%; /* Adjust width as needed */
 }
+
+/* CSS for table styling */
+table {
+    width: 80%; /* Adjust as needed */
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    text-align: right;
+}
+
+th, td {
+    padding: 0px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
