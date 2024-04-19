@@ -87,7 +87,7 @@ section {
 
 /* CSS for table styling */
 table {
-    width: 100%; /* Adjust as needed */
+    width: 95%; /* Adjust as needed */
     border-collapse: collapse;
     border: 1px solid #ddd;
     text-align: right;
