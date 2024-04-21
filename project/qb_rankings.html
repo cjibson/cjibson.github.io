@@ -19,11 +19,18 @@
         </nav>
     </header>
     <main>
-            <section id="qb_table">
-                <h2>QB Rankings</h2>
-                <div id="qb_table"></div>
+        <h2>QB Rankings</h2>
+            <section id="qb_1_table">
+                <h2>Player name, link, image here</h2>
+                <p>Write up here</p>
+                <div id="qb_1_table"></div>
             </section>
-        </div>
+
+            <section id="qb_2_table">
+                <h2>Player name, link, image here</h2>
+                <p>Write up here</p>
+                <div id="qb_2_table"></div>
+            </section>
     </main>
     <script>
         // Function to load and display CSV data as HTML table
@@ -61,5 +68,16 @@
         }
 
         // Load CSV data into tables
-        loadCSVAsTable('data/qb_rankings.csv', 'qb_table');
+        loadCSVAsTable('data/qb_data/qb_1.csv', 'qb_1_table');
+        loadCSVAsTable('data/qb_data/qb_2.csv', 'qb_2_table');
+        loadCSVAsTable('data/qb_data/qb_3.csv', 'qb_3_table');
+        loadCSVAsTable('data/qb_data/qb_4.csv', 'qb_4_table');
+        loadCSVAsTable('data/qb_data/qb_5.csv', 'qb_5_table');
+        loadCSVAsTable('data/qb_data/qb_6.csv', 'qb_6_table');
+        loadCSVAsTable('data/qb_data/qb_7.csv', 'qb_7_table');
+        loadCSVAsTable('data/qb_data/qb_8.csv', 'qb_8_table');
+        loadCSVAsTable('data/qb_data/qb_9.csv', 'qb_9_table');
+        loadCSVAsTable('data/qb_data/qb_10.csv', 'qb_10_table');
+        loadCSVAsTable('data/qb_data/qb_11.csv', 'qb_11_table');
+        loadCSVAsTable('data/qb_data/qb_12.csv', 'qb_12_table');
     </script>
