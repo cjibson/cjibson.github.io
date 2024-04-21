@@ -17,6 +17,12 @@ footer {
     text-align: center;
 }
 
+p {
+    padding: 10px;
+    text-align: center;
+}
+
+
 /* CSS for horizontal navigation */
 nav ul {
     list-style-type: none;
@@ -39,10 +45,10 @@ nav a {
 
 /* CSS for table styling */
 table {
-    width: 100%; /* Adjust as needed */
+    width: 90%; /* Adjust as needed */
     border-collapse: collapse;
     border: 1px solid #ddd;
-    text-align: right;
+    text-align: center;
 }
 
 th, td {
@@ -61,5 +67,6 @@ tr:hover {
 
 #qb_1_table,
 #qb_2_table {
-    width: 100%
+    width: 90%;
+    text-align: center;
 }
